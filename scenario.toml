@@ -2,11 +2,11 @@
 # AgentBeats Finance Agent Track
 
 [green_agent]
-agentbeats_id = "Rachnog/portfolio_evaluator"
+agentbeats_id = "019bae0c-8e75-7a22-a6db-eacfeefebb07"
 env = { GOOGLE_API_KEY = "${GOOGLE_API_KEY}", EVALUATOR_MODEL = "gemini-2.0-flash", LOG_LEVEL = "INFO" }
 
 [[participants]]
-agentbeats_id = "Rachnog/portfolio_constructor"
+agentbeats_id = "019bae0d-9747-7102-8351-aff6255bc8a4"
 name = "portfolio_constructor"
 env = { GOOGLE_API_KEY = "${GOOGLE_API_KEY}", CONSTRUCTOR_MODEL = "gemini-2.0-flash" }
 
