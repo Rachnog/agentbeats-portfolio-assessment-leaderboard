@@ -1,0 +1,17 @@
+{
+  "image_digests": {
+    "green-agent": "ghcr.io/rachnog/portfolio-evaluator@sha256:1ece5541eebdb7cadb1ab32d5886a595c223ce35b122322489e4349ae21487a9",
+    "portfolio_constructor": "ghcr.io/rachnog/portfolio-constructor@sha256:84e8839ab4e78ccb7341976c908877bfe72a512967d42117d76b4834a84dd6d9",
+    "agentbeats-client": "ghcr.io/agentbeats/agentbeats-client@sha256:13dfe3ef4e583a80e7ce2fe3becd0ce3b879841368a7f4fa40b6ebbabeeb014e"
+  },
+  "timestamp": "2026-01-11T19:13:43Z",
+  "github_actions": {
+    "run_url": "https://github.com/Rachnog/agentbeats-portfolio-assessment-leaderboard/actions/runs/20900449398",
+    "run_logs_url": "https://api.github.com/repos/Rachnog/agentbeats-portfolio-assessment-leaderboard/actions/runs/20900449398/logs",
+    "ref": "refs/heads/main",
+    "sha": "d13a51d4b77365747b2fb62ab3693fd236743a66",
+    "repository_url": "https://github.com/Rachnog/agentbeats-portfolio-assessment-leaderboard",
+    "workflow_ref": "Rachnog/agentbeats-portfolio-assessment-leaderboard/.github/workflows/run-scenario.yml@refs/heads/main",
+    "workflow_sha": "d13a51d4b77365747b2fb62ab3693fd236743a66"
+  }
+}
