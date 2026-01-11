@@ -12,12 +12,12 @@ env = { GOOGLE_API_KEY = "${GOOGLE_API_KEY}", CONSTRUCTOR_MODEL = "gemini-2.0-fl
 
 [config]
 # Single scenario configuration - template runs ONE scenario per workflow
-goal_description = "I want to save $50,000 for a house down payment in 5 years. I currently have $10,000 saved and can invest $500 per month. My risk tolerance is moderate."
-starting_amount = 10000
-monthly_contribution = 500
-target_amount = 50000
-timeline_years = 5
-risk_tolerance = "moderate"
+goal_description = "I'm 35 years old and want to retire at 65 with $2 million. I currently have $100,000 in retirement savings and can contribute $1,500 per month. My risk tolerance is moderate to aggressive."
+starting_amount = 100000
+monthly_contribution = 1500
+target_amount = 2000000
+timeline_years = 30
+risk_tolerance = "moderate-aggressive"
 
 # Note: Assessment results are committed to results/ directory
 # Submission metadata stored in submissions/ directory
