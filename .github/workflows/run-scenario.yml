@@ -82,7 +82,6 @@ jobs:
           USERNAME=${{ github.repository_owner }}
           UNIQUE_NAME="${USERNAME}-${TIMESTAMP}"
           echo "unique_name=$UNIQUE_NAME" >> $GITHUB_OUTPUT
-          echo "branch_name=submission-${UNIQUE_NAME}" >> $GITHUB_OUTPUT
 
       - name: Copy files to submission directory
         run: |
@@ -90,38 +89,16 @@ jobs:
           cp output/results.json results/${{ steps.metadata.outputs.unique_name }}.json
           cp output/provenance.json submissions/${{ steps.metadata.outputs.unique_name }}.provenance.json
 
-      - name: Determine target repository
-        id: target
-        env:
-            GH_TOKEN: ${{ github.token }}
-        run: |
-            PARENT_REPO=$(gh api repos/${{ github.repository }} --jq '.parent.full_name // "${{ github.repository }}"')
-            echo "Target repository: $PARENT_REPO"
-            echo "repo=$PARENT_REPO" >> $GITHUB_OUTPUT
-
-      - name: Create submission branch
-        run: |
-          git remote add upstream https://github.com/${{ steps.target.outputs.repo }}.git
-          git fetch upstream
-          git checkout -b ${{ steps.metadata.outputs.branch_name }} upstream/main
-
-      - name: Commit results
+      - name: Commit results directly to main
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add submissions/${{ steps.metadata.outputs.unique_name }}.toml submissions/${{ steps.metadata.outputs.unique_name }}.provenance.json results/${{ steps.metadata.outputs.unique_name }}.json
-          git commit -m "Submission: ${{ steps.metadata.outputs.unique_name }}
+          git commit -m "Add assessment results: ${{ steps.metadata.outputs.unique_name }}
 
           Workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-          git push origin ${{ steps.metadata.outputs.branch_name }}
-          echo "::notice title=Submission Branch Created::Your results are ready for submission on branch: ${{ steps.metadata.outputs.branch_name }}"
-
-      - name: Output PR link
-        run: |
-          echo "### Submit your results" >> $GITHUB_STEP_SUMMARY
-          echo "[Click here to open a pull request](https://github.com/${{ steps.target.outputs.repo }}/compare/main...${{ github.repository_owner }}:${{ github.event.repository.name }}:${{ steps.metadata.outputs.branch_name }}?expand=1)" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "⚠️ When creating the PR, UNCHECK 'Allow edits and access to secrets by maintainers' to protect your secrets." >> $GITHUB_STEP_SUMMARY
+          git push origin main
+          echo "::notice title=Results Committed::Assessment results committed to main branch"
 
       - name: Cleanup
         if: always()
