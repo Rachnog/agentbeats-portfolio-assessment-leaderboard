@@ -1,0 +1,46 @@
+{
+  "participants": {
+    "portfolio_constructor": "019bae0d-9747-7102-8351-aff6255bc8a4"
+  },
+  "results": [
+    {
+      "goal": "I want to save $50,000 for a house down payment in 5 years. I currently have $10,000 saved and can invest $500 per month. My risk tolerance is moderate.",
+      "portfolio": {
+        "tickers": [
+          {
+            "symbol": "VTI",
+            "allocation_percent": 60,
+            "reasoning": "Broad US stock market exposure for growth."
+          },
+          {
+            "symbol": "VXUS",
+            "allocation_percent": 20,
+            "reasoning": "International stock exposure for diversification."
+          },
+          {
+            "symbol": "BND",
+            "allocation_percent": 20,
+            "reasoning": "US Bond exposure for stability and downside protection."
+          }
+        ],
+        "investment_horizon_years": 5,
+        "expected_annual_return": "6-8%",
+        "risk_assessment": "moderate",
+        "reasoning": "This portfolio balances growth with downside protection. VTI and VXUS provide equity exposure, while BND offers stability. The allocation reflects a moderate risk tolerance suitable for a medium-term goal."
+      },
+      "evaluation": {
+        "probability_of_success": 70.0,
+        "diversification_score": 85.0,
+        "risk_score": 90.0,
+        "return_score": 75.0,
+        "reasoning": "The portfolio demonstrates good diversification by including US stocks (VTI), international stocks (VXUS), and US bonds (BND). This asset allocation strategy helps mitigate risk by spreading investments across different asset classes and geographies. The 60% allocation to VTI provides a solid foundation for growth, while the 20% allocation to VXUS enhances diversification and captures potential international market opportunities. The 20% allocation to BND offers stability and downside protection, which is particularly important given the 5-year investment horizon. The stated expected annual return of 6-8% is reasonable for this asset allocation, aligning with historical market performance and the portfolio's risk profile. Given the moderate risk tolerance and the time horizon, the portfolio appears well-suited to the investor's needs.",
+        "concerns": [
+          "While the portfolio is well-diversified, the bond allocation (BND) might be slightly low given the desire for downside protection, especially if market volatility increases. A slightly higher allocation to bonds could further reduce risk, although it might also slightly reduce potential returns.",
+          "The expected return of 6-8% is an estimate and not guaranteed. Market conditions can change, and actual returns may vary. It's important to regularly review and rebalance the portfolio to ensure it remains aligned with the investor's goals and risk tolerance.",
+          "The calculation of achieving $50,000 in 5 years needs to be verified with the given initial investment and monthly contributions. A financial calculator should be used to confirm if the expected return is sufficient to reach the goal."
+        ],
+        "overall_assessment": "Overall, this is a well-constructed portfolio suitable for a moderate risk tolerance and a 5-year investment horizon. The diversification is good, and the asset allocation is reasonable. However, the probability of success is estimated at 70% due to the uncertainty of market returns and the need to verify the return assumptions with a financial calculator to ensure the goal is realistically achievable. A slight adjustment to the bond allocation and regular monitoring are recommended."
+      }
+    }
+  ]
+}
