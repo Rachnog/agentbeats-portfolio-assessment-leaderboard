@@ -218,8 +218,15 @@ def generate_a2a_scenario(scenario: dict[str, Any]) -> str:
             lines.append(f"agentbeats_id = \"{p['agentbeats_id']}\"")
         participant_lines.append("\n".join(lines) + "\n")
 
-    config_section = scenario.get("config", {})
-    config_lines = [tomli_w.dumps({"config": config_section})]
+    # Handle both single config and multiple configs
+    if "configs" in scenario:
+        # Multiple configs mode
+        config_lines = [tomli_w.dumps({"config": {"configs": scenario["configs"]}})]
+    elif "config" in scenario:
+        # Single config mode (backward compatibility)
+        config_lines = [tomli_w.dumps({"config": scenario["config"]})]
+    else:
+        config_lines = [""]
 
     return A2A_SCENARIO_TEMPLATE.format(
         green_port=DEFAULT_PORT,
