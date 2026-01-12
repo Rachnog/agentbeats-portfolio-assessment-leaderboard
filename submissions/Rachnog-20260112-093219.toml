@@ -1,0 +1,45 @@
+# Portfolio Construction Assessment Scenario
+# AgentBeats Finance Agent Track
+
+[green_agent]
+agentbeats_id = "019bae3b-ca70-70b3-9e37-84e58b997c5e"
+env = { GOOGLE_API_KEY = "${GOOGLE_API_KEY}", EVALUATOR_MODEL = "gemini-2.0-flash", LOG_LEVEL = "INFO" }
+
+[[participants]]
+agentbeats_id = "019bae0d-9747-7102-8351-aff6255bc8a4"
+name = "portfolio_constructor"
+env = { GOOGLE_API_KEY = "${GOOGLE_API_KEY}", CONSTRUCTOR_MODEL = "gemini-2.0-flash" }
+
+# Multiple scenario configuration - evaluates portfolio across different goals
+# Each [[configs]] block defines a different financial scenario to test
+
+[[configs]]
+goal_type = "retirement"
+goal_description = "I'm 35 years old and want to retire at 65 with $2 million. I currently have $100,000 in retirement savings and can contribute $1,500 per month. My risk tolerance is moderate to aggressive."
+starting_amount = 100000
+monthly_contribution = 1500
+target_amount = 2000000
+timeline_years = 30
+risk_tolerance = "moderate-aggressive"
+
+[[configs]]
+goal_type = "house"
+goal_description = "I want to buy a house in 10 years. I have $50,000 saved and can contribute $2,000 per month. Target down payment is $200,000. My risk tolerance is moderate."
+starting_amount = 50000
+monthly_contribution = 2000
+target_amount = 200000
+timeline_years = 10
+risk_tolerance = "moderate"
+
+[[configs]]
+goal_type = "college"
+goal_description = "I'm saving for my child's college education in 15 years. I have $20,000 in a 529 plan and can contribute $800 per month. Goal is $150,000. Risk tolerance is moderate."
+starting_amount = 20000
+monthly_contribution = 800
+target_amount = 150000
+timeline_years = 15
+risk_tolerance = "moderate"
+
+# Note: Assessment results are committed to results/ directory
+# Submission metadata stored in submissions/ directory
+# Re-running assessment to test multi-tab leaderboard with fixed SQL queries
