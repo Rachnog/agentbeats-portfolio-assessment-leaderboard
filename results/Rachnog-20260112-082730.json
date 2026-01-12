@@ -1,0 +1,126 @@
+{
+  "participants": {
+    "portfolio_constructor": "019bae0d-9747-7102-8351-aff6255bc8a4"
+  },
+  "results": [
+    {
+      "aggregate_scores": {
+        "probability_of_success": 94.1,
+        "diversification_score": 75.8,
+        "risk_score": 80.4,
+        "return_score": 89.1
+      },
+      "scenarios": [
+        {
+          "goal_type": "retirement",
+          "goal_description": "I'm 35 years old and want to retire at 65 with $2 million. I currently have $100,000 in retirement savings and can contribute $1,500 per month. My risk tolerance is moderate to aggressive.",
+          "timeline_years": 30,
+          "starting_amount": 100000,
+          "target_amount": 2000000,
+          "portfolio": {
+            "tickers": [
+              {
+                "symbol": "VTI",
+                "allocation_percent": 60,
+                "reasoning": "Broad US market exposure for growth."
+              },
+              {
+                "symbol": "VXUS",
+                "allocation_percent": 20,
+                "reasoning": "International diversification for enhanced returns."
+              },
+              {
+                "symbol": "BND",
+                "allocation_percent": 20,
+                "reasoning": "US bond exposure for stability and downside risk mitigation."
+              }
+            ],
+            "investment_horizon_years": 30,
+            "expected_annual_return": "8-10%",
+            "risk_assessment": "moderate",
+            "reasoning": "A diversified portfolio emphasizing growth via equities (VTI and VXUS) with a portion allocated to bonds (BND) to manage risk over a long time horizon."
+          },
+          "probability_of_success": 83.5,
+          "diversification_score": 75.8,
+          "risk_score": 80.4,
+          "return_score": 89.1,
+          "reasoning": "Portfolio Analysis:\n- Expected annual return: 10.5%\n- Annual volatility: 12.8%\n- Diversification: 3 tickers, effective N = 2.3\n- Probability of achieving $2,000,000 in 30 years: 83.5%\n\nThe portfolio shows strong returns with moderate risk. Diversification is good.",
+          "concerns": []
+        },
+        {
+          "goal_type": "house",
+          "goal_description": "I want to buy a house in 10 years. I have $50,000 saved and can contribute $2,000 per month. Target down payment is $200,000. My risk tolerance is moderate.",
+          "timeline_years": 10,
+          "starting_amount": 50000,
+          "target_amount": 200000,
+          "portfolio": {
+            "tickers": [
+              {
+                "symbol": "VTI",
+                "allocation_percent": 60,
+                "reasoning": "Broad US stock market exposure for growth."
+              },
+              {
+                "symbol": "VXUS",
+                "allocation_percent": 20,
+                "reasoning": "International stock exposure for diversification."
+              },
+              {
+                "symbol": "BND",
+                "allocation_percent": 20,
+                "reasoning": "US Bond market to reduce volatility."
+              }
+            ],
+            "investment_horizon_years": 10,
+            "expected_annual_return": "7-9%",
+            "risk_assessment": "moderate",
+            "reasoning": "A diversified portfolio emphasizing growth stocks, with some bond exposure to mitigate risk over the long-term investment horizon."
+          },
+          "probability_of_success": 99.5,
+          "diversification_score": 75.8,
+          "risk_score": 80.4,
+          "return_score": 89.1,
+          "reasoning": "Portfolio Analysis:\n- Expected annual return: 10.5%\n- Annual volatility: 12.8%\n- Diversification: 3 tickers, effective N = 2.3\n- Probability of achieving $200,000 in 10 years: 99.5%\n\nThe portfolio shows strong returns with moderate risk. Diversification is good.",
+          "concerns": []
+        },
+        {
+          "goal_type": "college",
+          "goal_description": "I'm saving for my child's college education in 15 years. I have $20,000 in a 529 plan and can contribute $800 per month. Goal is $150,000. Risk tolerance is moderate.",
+          "timeline_years": 15,
+          "starting_amount": 20000,
+          "target_amount": 150000,
+          "portfolio": {
+            "tickers": [
+              {
+                "symbol": "VTI",
+                "allocation_percent": 60,
+                "reasoning": "Broad U.S. stock market exposure for growth."
+              },
+              {
+                "symbol": "VXUS",
+                "allocation_percent": 20,
+                "reasoning": "International stock exposure for diversification."
+              },
+              {
+                "symbol": "BND",
+                "allocation_percent": 20,
+                "reasoning": "U.S. bond exposure to mitigate risk."
+              }
+            ],
+            "investment_horizon_years": 15,
+            "expected_annual_return": "7-9%",
+            "risk_assessment": "moderate",
+            "reasoning": "This portfolio balances growth potential from stocks with stability from bonds, suitable for a 15-year horizon and moderate risk tolerance. VTI provides broad US equity exposure, VXUS diversifies internationally, and BND offers fixed income stability."
+          },
+          "probability_of_success": 99.3,
+          "diversification_score": 75.8,
+          "risk_score": 80.4,
+          "return_score": 89.1,
+          "reasoning": "Portfolio Analysis:\n- Expected annual return: 10.5%\n- Annual volatility: 12.8%\n- Diversification: 3 tickers, effective N = 2.3\n- Probability of achieving $150,000 in 15 years: 99.3%\n\nThe portfolio shows strong returns with moderate risk. Diversification is good.",
+          "concerns": []
+        }
+      ],
+      "num_scenarios": 3
+    }
+  ]
+}
