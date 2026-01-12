@@ -42,3 +42,4 @@ risk_tolerance = "moderate"
 
 # Note: Assessment results are committed to results/ directory
 # Submission metadata stored in submissions/ directory
+# Re-running assessment to test multi-tab leaderboard with fixed SQL queries
